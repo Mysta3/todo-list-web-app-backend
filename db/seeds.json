@@ -1,0 +1,12 @@
+[
+  {
+    "email": "tester@gmail.com",
+    "password": "pass1234",
+    "todoList": ["Learn React Native", "Deploy webApp"]
+  },
+  {
+    "email": "tester1@gmail.com",
+    "password": "pass1234",
+    "todoList": ["Pick Birthday gift for Wife", "Wash Car"]
+  }
+]
