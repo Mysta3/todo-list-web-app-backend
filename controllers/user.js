@@ -7,19 +7,21 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:uid', (req, res) => {
-  Users.findOne(req.body.uid)
-    .then((user) => res.json(user.list))
+  Users.find({ uid: req.params.uid })
+    .then((user) => res.json(user[0].list))
     .catch((err) => {
-      console.log(err);
+      console.log(err, 'something went wrong');
     });
 });
 
-// router.post('/', (req, res) => {
-//   Users.create({
-//     _id: req.body.id,
-//     list: [],
-//   }).then((user) => res.json(user));
-// });
+router.post('/', (req, res) => {
+  let newUser = req.body;
+  Users.create(newUser)
+    .then((user) => res.json(user))
+    .catch((err) => {
+      console.log(err, 'something went wrong');
+    });
+});
 
 // router.delete('/:email', (req, res) => {
 //   Users.findOneAndDelete({ email: req.params.email }).then((user) =>
