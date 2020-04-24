@@ -23,10 +23,4 @@ router.post('/', (req, res) => {
     });
 });
 
-// router.delete('/:email', (req, res) => {
-//   Users.findOneAndDelete({ email: req.params.email }).then((user) =>
-//     res.json(user)
-//   );
-// });
-
 module.exports = router;
