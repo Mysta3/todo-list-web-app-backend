@@ -7,11 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:uid', (req, res) => {
-  Users.find({ uid: req.params.uid })
-    .then((user) => res.json(user[0].list))
-    .catch((err) => {
-      console.log(err, 'something went wrong');
-    });
+ Users.find({ uid: req.params.uid })
+   .then((user) => res.json(user[0].list))
+   .catch((err) => {
+     console.log(err, 'something went wrong');
+   });
 });
 
 router.post('/', (req, res) => {
