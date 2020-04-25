@@ -23,4 +23,15 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/:uid', (req, res) => {
+  let updateUser = req.body;
+  Users.findOneAndUpdate({ uid: req.params.uid }, updateUser, {
+    new: true,
+  })
+    .then((user) => res.json(user))
+    .catch((err) => {
+      console.log(err, 'something went wrong');
+    });
+});
+
 module.exports = router;
