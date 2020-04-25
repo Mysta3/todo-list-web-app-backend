@@ -19,8 +19,8 @@ Created from scratch in order to display web development fundamentals across the
 
 - Clone & or Download
 - Navigate to folder
-- run `javascript npm i`
+- run `npm i`
 - I recommend using 3 terminals, I personally use terminal within VSCODE
 - run MongoDB in terminal using mongo command
-- In another terminal run seed file using `javascript node db/seeds.js` command
-- In 3rd terminal run `javascript node app.js`
+- In another terminal run seed file using `node db/seeds.js` command
+- In 3rd terminal run `node app.js`
