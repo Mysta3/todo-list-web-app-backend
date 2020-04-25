@@ -1,6 +1,6 @@
 # MERN Stack ToDo List - BackEnd
 
-![Project in Browser](https://imgur.com/nmho5K7)
+![Project In Browser](https://i.imgur.com/nmho5K7.png)
 
 ## Description
 
