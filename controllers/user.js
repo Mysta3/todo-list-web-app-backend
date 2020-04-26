@@ -7,11 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:uid', (req, res) => {
- Users.find({ uid: req.params.uid })
-   .then((user) => res.json(user[0].list))
-   .catch((err) => {
-     console.log(err, 'something went wrong');
-   });
+  Users.find({ uid: req.params.uid })
+    .then((user) => res.json(user[0].list))
+    .catch((err) => {
+      console.log(err, 'something went wrong');
+    });
 });
 
 router.post('/', (req, res) => {
@@ -28,7 +28,10 @@ router.put('/:uid', (req, res) => {
   Users.findOneAndUpdate({ uid: req.params.uid }, updateUser, {
     new: true,
   })
-    .then((user) => res.json(user))
+    .then((user) => {
+      res.json(user);
+      console.log(user.list);
+    })
     .catch((err) => {
       console.log(err, 'something went wrong');
     });
