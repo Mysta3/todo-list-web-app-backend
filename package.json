@@ -4,7 +4,8 @@
   "description": "todo list ",
   "main": "app.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha"
+    "test": "node_modules/.bin/mocha",
+    "start": "node app.js"
   },
   "author": "Myshawne S",
   "license": "ISC",
